@@ -7,13 +7,15 @@
 }
 
 :root {
-  --color-bg: #0e0e10;
-  --color-surface: #1a1a1f;
-  --color-border: #2a2a30;
-  --color-text: #e4e4e7;
-  --color-text-muted: #8b8b94;
-  --color-accent: #7c5cfc;
-  --color-accent-hover: #9278ff;
+  --color-bg: #1C2620;
+  --color-surface: #253228;
+  --color-border: #344838;
+  --color-border-emphasis: #C46B3A;
+  --color-text: #F0EDE8;
+  --color-text-muted: #B09478;
+  --color-accent: #D4854A;
+  --color-accent-hover: #C46B3A;
+  --color-accent-muted: #3A2318;
   --radius: 10px;
 }
 
@@ -35,6 +37,11 @@ main {
 .container {
   max-width: 420px;
   margin: 0 auto;
+}
+
+.app-icon {
+  border-radius: 22px;
+  margin-bottom: 1.25rem;
 }
 
 h1 {
@@ -125,8 +132,8 @@ legend {
 }
 
 .platform-option input:checked + span {
-  border-color: var(--color-accent);
-  background: rgba(124, 92, 252, 0.1);
+  border-color: var(--color-border-emphasis);
+  background: var(--color-accent-muted);
 }
 
 /* Toggle */
@@ -180,7 +187,7 @@ legend {
 button[type="submit"] {
   padding: 0.75rem;
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-bg);
   border: none;
   border-radius: var(--radius);
   font-size: 1rem;

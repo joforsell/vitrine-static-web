@@ -39,24 +39,37 @@ main {
   margin: 0 auto;
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .app-icon {
-  display: block;
-  margin: 0 auto 1.25rem;
   border-radius: 22px;
+  margin-bottom: 1.25rem;
 }
 
 h1 {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  text-align: center;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.125rem;
+}
+
+.tagline {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
 }
 
 .subtitle {
-  text-align: center;
   color: var(--color-text-muted);
-  margin-bottom: 2rem;
   line-height: 1.5;
 }
 

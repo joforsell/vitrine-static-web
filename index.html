@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitrine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h1>Vitrine</h1>
+      <p class="subtitle">Get early access to Vitrine — your personal showroom for miniatures.</p>
+
+      <form id="signup-form">
+        <!-- Honeypot — hidden from real users, bots fill it in -->
+        <div aria-hidden="true" class="hp">
+          <input type="text" name="company" tabindex="-1" autocomplete="off">
+        </div>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <fieldset>
+          <legend>Platform</legend>
+          <div class="platform-picker">
+            <label class="platform-option">
+              <input type="radio" name="platform" value="ios" required>
+              <span>iOS</span>
+            </label>
+            <label class="platform-option">
+              <input type="radio" name="platform" value="android">
+              <span>Android</span>
+            </label>
+            <label class="platform-option">
+              <input type="radio" name="platform" value="both">
+              <span>Both</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <label class="toggle-label">
+          <span>I'd like to join the beta</span>
+          <input type="checkbox" id="beta" name="beta" value="yes">
+          <span class="toggle"></span>
+        </label>
+
+        <button type="submit">Sign up</button>
+      </form>
+
+      <p id="success-message" class="success hidden">Thanks! We'll be in touch.</p>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(which sips:*)",
+      "Bash(python3 << 'PYEOF'\nfrom PIL import Image, ImageDraw\n\nimg = Image.open\\(\"/Users/johan.forsell/Developer/vitrine-static-web/icon.png\"\\).convert\\(\"RGBA\"\\)\nimg = img.resize\\(\\(256, 256\\), Image.LANCZOS\\)\n\n# Create rounded mask\nmask = Image.new\\(\"L\", \\(256, 256\\), 0\\)\ndraw = ImageDraw.Draw\\(mask\\)\nradius = 58  # ~22% corner radius, matches iOS style\ndraw.rounded_rectangle\\([0, 0, 256, 256], radius=radius, fill=255\\)\n\n# Apply mask\nimg.putalpha\\(mask\\)\n\n# Save at 32x32 for favicon\nfavicon = img.resize\\(\\(32, 32\\), Image.LANCZOS\\)\nfavicon.save\\(\"/Users/johan.forsell/Developer/vitrine-static-web/favicon.png\", \"PNG\"\\)\nprint\\(\"done\"\\)\nPYEOF)",
+      "WebSearch",
+      "Bash(cat /Users/johan.forsell/Developer/vitrine-web-app/package.json | python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('next:', d['dependencies']['next']\\); print\\('react:', d['dependencies']['react']\\); print\\('supabase:', d['dependencies']['@supabase/supabase-js']\\)\")"
     ]
   }
 }

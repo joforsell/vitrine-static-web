@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paint Library Invite — Vitrine</title>
+  <meta property="og:title" content="You've been invited to share a paint library">
+  <meta property="og:description" content="Someone wants to share their paint collection with you on Vitrine. Open the link in the app to accept.">
+  <meta property="og:image" content="https://vitrineminis.com/paint-library-invite/og-image.png">
+  <meta property="og:url" content="https://vitrineminis.com/paint-library-invite/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="You've been invited to share a paint library">
+  <meta name="twitter:description" content="Someone wants to share their paint collection with you on Vitrine. Open the link in the app to accept.">
+  <meta name="twitter:image" content="https://vitrineminis.com/paint-library-invite/og-image.png">
+  <meta name="description" content="Someone wants to share their paint collection with you on Vitrine. Open the link in the app to accept.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <style>
+    .invite-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .invite-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .invite-card h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .invite-card p {
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      font-size: 0.9375rem;
+      margin-bottom: 1rem;
+    }
+
+    .invite-card p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .app-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--color-accent);
+      color: var(--color-bg);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .app-link:hover {
+      background: var(--color-accent-hover);
+    }
+
+    .home-link {
+      display: block;
+      text-align: center;
+      margin-top: 1.5rem;
+      color: var(--color-text-muted);
+      font-size: 0.875rem;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .home-link:hover {
+      color: var(--color-accent);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <header class="hero">
+        <img src="../icon.png" alt="Vitrine app icon" class="app-icon" width="96" height="96">
+        <h1>Vitrine</h1>
+        <p class="tagline">For miniature painters</p>
+      </header>
+
+      <div class="invite-card">
+        <h2>Paint library invite</h2>
+        <p>Someone wants to share their paint collection with you on Vitrine. When you share a paint library, everyone in the group can see, edit, and manage each other's paints.</p>
+        <p>Open this link on a device with Vitrine installed to accept the invite.</p>
+        <!-- TODO: Replace with actual App Store link -->
+        <a href="#" class="app-link">Download Vitrine</a>
+      </div>
+
+      <a href="/" class="home-link">What is Vitrine?</a>
+    </div>
+  </main>
+</body>
+</html>

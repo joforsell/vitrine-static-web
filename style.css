@@ -280,6 +280,29 @@ button[type="submit"]:hover {
   font-size: 0.9375rem;
 }
 
+/* Footer */
+.site-footer {
+  padding: 2rem 1.5rem 2.5rem;
+  text-align: center;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.site-footer a {
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.site-footer a:hover {
+  color: var(--color-accent);
+}
+
 /* Honeypot — must be invisible but not display:none (bots skip those) */
 .hp {
   position: absolute;

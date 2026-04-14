@@ -282,13 +282,21 @@ button[type="submit"]:hover {
 
 /* Footer */
 .site-footer {
-  padding: 2rem 1.5rem 2.5rem;
+  padding: 2.5rem 1.5rem 3rem;
   text-align: center;
+  border-top: 1px solid var(--color-border);
 }
 
 .site-footer .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 420px;
+}
+
+.site-footer .footer-links {
+  display: flex;
   gap: 1.5rem;
 }
 
@@ -301,6 +309,16 @@ button[type="submit"]:hover {
 
 .site-footer a:hover {
   color: var(--color-accent);
+}
+
+.site-footer .footer-contact {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+.site-footer .footer-contact a {
+  font-size: 0.75rem;
 }
 
 /* Honeypot — must be invisible but not display:none (bots skip those) */

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beta Feedback — Vitrine</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <style>
+    main {
+      align-items: flex-start;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .container {
+      max-width: 480px;
+    }
+
+    .survey-form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-accent);
+      margin-bottom: -0.75rem;
+    }
+
+    .info-box {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      color: var(--color-text-muted);
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .info-box strong {
+      color: var(--color-text);
+    }
+
+    .question label {
+      display: block;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--color-text);
+      margin-bottom: 0.75rem;
+    }
+
+    .rating-scale {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .rating-option {
+      flex: 1;
+      cursor: pointer;
+    }
+
+    .rating-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .rating-option span {
+      display: block;
+      text-align: center;
+      padding: 0.625rem 0;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-text);
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .rating-option input:checked + span {
+      border-color: var(--color-border-emphasis);
+      background: var(--color-accent-muted);
+    }
+
+    .rating-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.375rem;
+      font-size: 0.6875rem;
+      color: var(--color-text-muted);
+    }
+
+    .plan-picker {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .plan-option {
+      flex: 1;
+      cursor: pointer;
+    }
+
+    .plan-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .plan-option span {
+      display: block;
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--color-text);
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .plan-option input:checked + span {
+      border-color: var(--color-border-emphasis);
+      background: var(--color-accent-muted);
+    }
+
+    textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      color: var(--color-text);
+      font-size: 0.9375rem;
+      font-family: inherit;
+      line-height: 1.5;
+      outline: none;
+      resize: vertical;
+      min-height: 5rem;
+      transition: border-color 0.15s;
+    }
+
+    textarea:focus {
+      border-color: var(--color-accent);
+    }
+
+    textarea::placeholder {
+      color: var(--color-text-muted);
+    }
+
+    .survey-form button[type="submit"] {
+      padding: 0.75rem;
+      background: var(--color-accent);
+      color: var(--color-bg);
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-top: 0.5rem;
+    }
+
+    .survey-form button[type="submit"]:hover {
+      background: var(--color-accent-hover);
+    }
+
+    .survey-form button[type="submit"]:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .error-page {
+      text-align: center;
+    }
+
+    .error-page p {
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-top: 1rem;
+    }
+
+    .thank-you {
+      text-align: center;
+    }
+
+    .thank-you h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .thank-you p {
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      font-size: 0.9375rem;
+    }
+
+    .home-link {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      color: var(--color-text-muted);
+      font-size: 0.875rem;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .home-link:hover {
+      color: var(--color-accent);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <header class="hero">
+        <img src="../icon.png" alt="Vitrine app icon" class="app-icon" width="96" height="96">
+        <h1>Beta Feedback</h1>
+        <p class="tagline">Vitrine</p>
+      </header>
+
+      <!-- Error state: invalid or missing waitlist ID -->
+      <div id="error-state" class="error-page hidden">
+        <p>This survey link doesn't look right. If you received this link by email, try opening it again from the original message.</p>
+        <a href="/" class="home-link">Back to Vitrine</a>
+      </div>
+
+      <!-- Already submitted state -->
+      <div id="already-submitted" class="thank-you hidden">
+        <h2>You've already submitted feedback</h2>
+        <p>Thanks again for helping shape Vitrine!</p>
+        <a href="/" class="home-link">Back to Vitrine</a>
+      </div>
+
+      <!-- Thank you state -->
+      <div id="thank-you" class="thank-you hidden">
+        <h2>Thank you!</h2>
+        <p>Check your email for a 3-month premium code to share with a friend!</p>
+        <a href="/" class="home-link">Back to Vitrine</a>
+      </div>
+
+      <!-- Survey form -->
+      <form id="survey-form" class="survey-form hidden">
+
+        <!-- Limits section -->
+        <p class="section-label">Free tier limits</p>
+
+        <div class="info-box">
+          The free tier includes <strong>20 miniatures</strong> and <strong>10 recipes</strong>. Vitrine Premium removes all limits.
+        </div>
+
+        <div class="question">
+          <label>How fair do these limits feel?</label>
+          <div class="rating-scale">
+            <label class="rating-option">
+              <input type="radio" name="limits_fairness" value="1" required>
+              <span>1</span>
+            </label>
+            <label class="rating-option">
+              <input type="radio" name="limits_fairness" value="2">
+              <span>2</span>
+            </label>
+            <label class="rating-option">
+              <input type="radio" name="limits_fairness" value="3">
+              <span>3</span>
+            </label>
+            <label class="rating-option">
+              <input type="radio" name="limits_fairness" value="4">
+              <span>4</span>
+            </label>
+            <label class="rating-option">
+              <input type="radio" name="limits_fairness" value="5">
+              <span>5</span>
+            </label>
+          </div>
+          <div class="rating-labels">
+            <span>Too strict</span>
+            <span>Very fair</span>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="fair_limits">What limits would you consider fair?</label>
+          <textarea id="fair_limits" name="fair_limits" placeholder="e.g. 50 minis and 25 recipes, or unlimited minis with limited recipes..."></textarea>
+        </div>
+
+        <!-- Pricing section -->
+        <p class="section-label">Pricing</p>
+
+        <div class="info-box">
+          Vitrine Premium pricing options:
+          <br><strong>€3.99/month</strong> · <strong>€19.99/year</strong> · <strong>€34.99 lifetime</strong>
+        </div>
+
+        <div class="question">
+          <label>How likely are you to pay for premium?</label>
+          <div class="rating-scale">
+            <label class="rating-option">
+              <input type="radio" name="pricing_likelihood" value="1" required>
+              <span>1</span>
+            </label>
+            <label class="rating-option">
+              <input type="radio" name="pricing_likelihood" value="2">
+              <span>2</span>
+            </label>
+            <label class="rating-option">
+              <input type="radio" name="pricing_likelihood" value="3">
+              <span>3</span>
+            </label>
+            <label class="rating-option">
+              <input type="radio" name="pricing_likelihood" value="4">
+              <span>4</span>
+            </label>
+            <label class="rating-option">
+              <input type="radio" name="pricing_likelihood" value="5">
+              <span>5</span>
+            </label>
+          </div>
+          <div class="rating-labels">
+            <span>Very unlikely</span>
+            <span>Very likely</span>
+          </div>
+        </div>
+
+        <div class="question">
+          <label>Which plan would you choose?</label>
+          <div class="plan-picker">
+            <label class="plan-option">
+              <input type="radio" name="plan_choice" value="monthly" required>
+              <span>Monthly<br>€3.99</span>
+            </label>
+            <label class="plan-option">
+              <input type="radio" name="plan_choice" value="annual">
+              <span>Annual<br>€19.99</span>
+            </label>
+            <label class="plan-option">
+              <input type="radio" name="plan_choice" value="lifetime">
+              <span>Lifetime<br>€34.99</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label for="fair_pricing">What would you consider fair pricing?</label>
+          <textarea id="fair_pricing" name="fair_pricing" placeholder="e.g. I'd pay €2/month, or lifetime at €25 would be a no-brainer..."></textarea>
+        </div>
+
+        <!-- General section -->
+        <p class="section-label">General</p>
+
+        <div class="question">
+          <label for="best_feature">What feature do you find most valuable in the app?</label>
+          <textarea id="best_feature" name="best_feature" placeholder="What keeps you coming back?"></textarea>
+        </div>
+
+        <div class="question">
+          <label for="open_ended">Anything else you'd like to share?</label>
+          <textarea id="open_ended" name="open_ended" placeholder="Bugs, feature requests, compliments, complaints..."></textarea>
+        </div>
+
+        <button type="submit">Submit feedback</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="/terms/">Terms & Conditions</a>
+        <a href="/privacy/">Privacy Policy</a>
+      </div>
+      <p class="footer-contact"><a href="mailto:contact@vitrineminis.com">contact@vitrineminis.com</a></p>
+    </div>
+  </footer>
+
+  <script src="survey.js"></script>
+</body>
+</html>

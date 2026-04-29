@@ -23,48 +23,15 @@ form.addEventListener("submit", async (e) => {
 
   const formData = new FormData(form);
 
-  const answers = [];
-
-  // Rating questions
-  const limitsFairness = formData.get("limits_fairness");
-  if (limitsFairness) {
-    answers.push({
-      question_key: "limits_fairness",
-      answer_rating: parseInt(limitsFairness),
-    });
-  }
-
-  const pricingLikelihood = formData.get("pricing_likelihood");
-  if (pricingLikelihood) {
-    answers.push({
-      question_key: "pricing_likelihood",
-      answer_rating: parseInt(pricingLikelihood),
-    });
-  }
-
-  // Plan choice
-  const planChoice = formData.get("plan_choice");
-  if (planChoice) {
-    answers.push({ question_key: "plan_choice", answer_text: planChoice });
-  }
-
-  // Text questions
-  const textFields = [
-    "fair_limits",
-    "fair_pricing",
-    "best_feature",
-    "open_ended",
-  ];
-  for (const key of textFields) {
-    const value = formData.get(key)?.trim();
-    if (value) {
-      answers.push({ question_key: key, answer_text: value });
-    }
-  }
-
   const payload = {
     waitlist_id: waitlistId,
-    answers,
+    limits_fairness: parseInt(formData.get("limits_fairness")) || null,
+    fair_limits: formData.get("fair_limits")?.trim() || null,
+    pricing_likelihood: parseInt(formData.get("pricing_likelihood")) || null,
+    plan_choice: formData.get("plan_choice") || null,
+    fair_pricing: formData.get("fair_pricing")?.trim() || null,
+    best_feature: formData.get("best_feature")?.trim() || null,
+    open_ended: formData.get("open_ended")?.trim() || null,
   };
 
   try {

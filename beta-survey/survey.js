@@ -44,15 +44,18 @@ form.addEventListener("submit", async (e) => {
     if (res.ok) {
       form.classList.add("hidden");
       thankYou.classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       const data = await res.json().catch(() => null);
 
       if (data?.error === "already_submitted") {
         form.classList.add("hidden");
         alreadySubmitted.classList.remove("hidden");
+        window.scrollTo({ top: 0, behavior: "smooth" });
       } else if (data?.error === "invalid_waitlist_id") {
         form.classList.add("hidden");
         errorState.classList.remove("hidden");
+        window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         alert(data?.error ?? "Something went wrong. Please try again.");
         submitBtn.disabled = false;

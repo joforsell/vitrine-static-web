@@ -42,6 +42,7 @@ form.addEventListener("submit", async (e) => {
     });
 
     if (res.ok) {
+      submitBtn.textContent = "Submitted!";
       form.classList.add("hidden");
       thankYou.classList.remove("hidden");
       window.scrollTo({ top: 0, behavior: "smooth" });

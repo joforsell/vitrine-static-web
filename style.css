@@ -297,6 +297,7 @@ h1 {
 @media (max-width: 520px) {
   .feature-screens figure {
     min-width: 0;
+    width: 100%;
     height: 380px;
   }
   .feature-screens img {

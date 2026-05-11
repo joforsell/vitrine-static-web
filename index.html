@@ -5,118 +5,229 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vitrine</title>
   <meta property="og:title" content="Vitrine — For Miniature Painters">
-  <meta property="og:description" content="Every brushstroke has a story. Soon you'll have a place to keep them all.">
+  <meta property="og:description" content="The collection app your paint desk is missing. Track every miniature, save every recipe, and show off your work.">
   <meta property="og:image" content="https://vitrineminis.com/og-image.png">
   <meta property="og:url" content="https://vitrineminis.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vitrine — For Miniature Painters">
-  <meta name="twitter:description" content="Every brushstroke has a story. Soon you'll have a place to keep them all.">
+  <meta name="twitter:description" content="The collection app your paint desk is missing. Track every miniature, save every recipe, and show off your work.">
   <meta name="twitter:image" content="https://vitrineminis.com/og-image.png">
-  <meta name="description" content="Every brushstroke has a story. Soon you'll have a place to keep them all.">
+  <meta name="description" content="The collection app your paint desk is missing. Track every miniature, save every recipe, and show off your work.">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
   <main>
-    <div class="container">
-      <header class="hero">
+    <section class="hero">
+      <div class="container">
         <img src="icon.png" alt="Vitrine app icon" class="app-icon" width="96" height="96">
         <h1>Vitrine</h1>
         <p class="tagline">For miniature painters</p>
-        <p class="subtitle">Every brushstroke has a story. Soon you'll have a place to keep them all.</p>
-      </header>
+        <p class="subtitle">The app your paint desk is missing. Track every miniature, save every recipe, and show off your work.</p>
 
-      <div class="preorder-banner">
-        <p class="preorder-label">Coming soon</p>
-        <p class="preorder-text">Pre-order and get <strong>50% off any Vitrine Premium plan</strong>. Join the waitlist below to get notified when pre-order opens.</p>
+        <a href="#waitlist" class="preorder-banner">
+          <span class="preorder-label">Coming soon</span>
+          <span class="preorder-text">Pre-order and get <strong>50% off your first year</strong> on monthly or yearly, or <strong>50% off the lifetime purchase</strong>. Tap to join the waitlist.</span>
+          <span class="preorder-arrow" aria-hidden="true">↓</span>
+        </a>
+
+        <a href="https://app.vitrineminis.com" target="_blank" rel="noopener" class="hero-secondary-cta">
+          See what painters are sharing right now
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
       </div>
+    </section>
 
-      <form id="signup-form">
-        <!-- Honeypot — hidden from real users, bots fill it in -->
-        <div aria-hidden="true" class="hp">
-          <input type="text" name="company" tabindex="-1" autocomplete="off">
-        </div>
+    <section class="section section-library">
+      <div class="container container-wide">
+        <p class="section-eyebrow">Inside Vitrine</p>
+        <h2 class="section-title">Everything you do with your miniatures</h2>
+        <p class="section-lede">Catalogue every model. Save the recipes you write. Track the paints on your shelf. Show your work off in your own public showroom or browse what other painters are doing. And watch your hobby take shape in the Statistics hub.</p>
 
-        <fieldset>
-          <legend>Email</legend>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required>
-        </fieldset>
-
-        <fieldset>
-          <legend>Platform</legend>
-          <div class="platform-picker">
-            <label class="platform-option">
-              <input type="radio" name="platform" value="ios" required>
-              <span>iOS</span>
-            </label>
-            <label class="platform-option">
-              <input type="radio" name="platform" value="android">
-              <span>Android</span>
-            </label>
-            <label class="platform-option">
-              <input type="radio" name="platform" value="both">
-              <span>Both</span>
-            </label>
+        <article class="feature-block">
+          <h3>Miniatures</h3>
+          <p>Catalogue every model. Track each piece individually as it moves through your pipeline: unboxed, assembled, primed, work-in-progress, painted, based, finished, or whatever stages match how you actually paint. Each one is yours to rename, reorder, or remove. A 5-pack squad can sit at 2 finished, 1 wip, and 2 primed at the same time. The pile of shame finally gets honest accounting.</p>
+          <div class="feature-screens">
+            <figure>
+              <img src="marketing/finished/miniatures.png" alt="Main miniatures library view">
+              <figcaption>Every collection, every model</figcaption>
+            </figure>
+            <figure>
+              <img src="marketing/finished/pieces.png" alt="Miniature detail view with the pieces section exploded outside the bezel, showing per-stage state management">
+              <figcaption>Track every piece through every stage</figcaption>
+            </figure>
+            <figure style="--phone-x: 39.5%">
+              <img src="marketing/finished/discover-feed.png" alt="Discover feed showing community miniatures">
+              <figcaption>Browse the community feed</figcaption>
+            </figure>
+            <figure>
+              <img src="marketing/finished/showroom.png" alt="Public showroom view with the filter sheet open">
+              <figcaption>Your own public showroom</figcaption>
+            </figure>
           </div>
-        </fieldset>
+          <ul class="feature-list">
+            <li>Add as many photos as you want per mini. Drag to reorder, and pick one as the hero shot at the top of the detail screen</li>
+            <li>Multiple named collections like Space Marines, Shelf of Shame, or Ongoing Commissions</li>
+            <li>Tag every mini with manufacturer, setting, model, or genre. Use those tags (plus status, scale, and date) to filter and search across both your own collection and the Discover community feed</li>
+            <li>Link to the 3D print model on MyMiniFactory, Thingiverse, or Printables, for your own reference or for others to see in your showroom</li>
+            <li><strong>Show them off:</strong> every named account gets a handle. Use it to share your public showroom inside the app, or as app.vitrineminis.com/u/your-handle anywhere else</li>
+            <li><strong>Browse the community:</strong> get inspired by others' showcased miniatures in a chronological feed</li>
+          </ul>
+        </article>
 
-        <label class="toggle-label">
-          <span>I'd like to join the beta</span>
-          <input type="checkbox" id="beta" name="beta" value="yes">
-          <span class="toggle"></span>
-        </label>
+        <article class="feature-block">
+          <h3>Paint recipes & session mode</h3>
+          <p>Record exactly how you painted something. Every layer, wash, drybrush, glaze, saved so you can recreate it six months later without guessing. Recipes are made to be shared: pull anyone else's into your library, or publish yours so another painter can use it. When it's time to paint, start a Session and follow any recipe step by step.</p>
+          <div class="feature-screens">
+            <figure>
+              <img src="marketing/finished/recipe-overview.png" alt="Main recipes library view">
+              <figcaption>Every recipe you've written</figcaption>
+            </figure>
+            <figure>
+              <img src="marketing/finished/recipe-details.png" alt="Recipe detail view">
+              <figcaption>Step by step, paint by paint</figcaption>
+            </figure>
+            <figure>
+              <img src="marketing/finished/session.png" alt="Painting session step view">
+              <figcaption>Step-by-step painting sessions</figcaption>
+            </figure>
+            <figure>
+              <img src="marketing/finished/recipe-search.png" alt="Recipe search view in the Discover tab">
+              <figcaption>Search the community recipes</figcaption>
+            </figure>
+          </div>
+          <ul class="feature-list">
+            <li>Structured steps: paint, technique, freetext notes, plus a colour swatch for every paint used</li>
+            <li>Mark a recipe as a template and create new ones pre-populated with its steps, paints, cover image, and step photos</li>
+            <li>Guided sessions walk you through a saved recipe; freeform sessions record what you do as you do it, and can be saved as a recipe at the end</li>
+            <li>Sessions persist between visits, resuming exactly where you left off</li>
+            <li>"Show Alternatives" on any step suggests cross-brand substitutes sorted by colour distance, and highlights the ones you already own</li>
+            <li>Mix ratio per step, version history, and step-level WIP photos for the moments you want to document a recipe in detail</li>
+            <li><strong>Search the community:</strong> find public recipes by name or model tag, then save any to your own library</li>
+          </ul>
+        </article>
 
-        <fieldset id="play-store-field" class="hidden">
-          <legend>Google Play email</legend>
-          <input type="email" id="play-store-email" name="play_store_email" placeholder="you@gmail.com">
-          <p class="field-hint">The email address linked to your Google Play account, so we can add you to the Android beta.</p>
-        </fieldset>
+        <article class="feature-block">
+          <h3>Paint tracking</h3>
+          <p>Your paint cabinet, on your phone. Vitrine knows what you own and how every paint relates to every other across brands, so you always have a substitute lined up when your usual one runs out.</p>
+          <div class="feature-screens">
+            <figure style="--phone-x: 37.6%">
+              <img src="marketing/finished/paints.png" alt="Main paint library view with import options exploded outside the bezel">
+              <figcaption>Import, scan, submit, share</figcaption>
+            </figure>
+          </div>
+          <ul class="feature-list">
+            <li>Personal collection of every paint you own</li>
+            <li>Cross-brand equivalents from community conversion charts. Aliases for renamed paints (Goblin Green resolves to Warboss Green automatically)</li>
+            <li>"Add Entire Range" bulk-adds a whole brand+range to your collection with a count preview</li>
+            <li>Import from PaintRack to bring an existing inventory across in one go</li>
+            <li>Scan paint barcodes to find them in the catalog</li>
+            <li>Sort by colour similarity to find alternates by eye</li>
+            <li>Submit paints that aren't in the catalog yet, and track review status in My Submissions</li>
+            <li>Share your library with a partner or small group via invite link, and see merged paint availability</li>
+          </ul>
+        </article>
 
-        <button type="submit">Sign up</button>
-      </form>
+        <article class="feature-block">
+          <h3>Statistics</h3>
+          <p>Every painted piece, every stage transition, every session feeds a Statistics hub that turns your pipeline into shareable infographics. Honest, motivating, and just a bit competitive with your past self.</p>
+          <div class="feature-screens">
+            <figure>
+              <img src="marketing/finished/statistics-joined.png" alt="State Timeline and Pile of Shame charts side by side">
+              <figcaption>Built-in charts, exportable as infographics</figcaption>
+            </figure>
+          </div>
+          <ul class="feature-list">
+            <li><strong>State Timeline</strong> — pieces moving through stages over a date range you pick. Export as an animated video to share progress</li>
+            <li><strong>Pile of Shame</strong> — counts and trends for unstarted and wip miniatures. Honest, unflinching, slightly motivating</li>
+            <li><strong>Collection Comparison</strong> — completion percentage by collection. Which army is closest to done?</li>
+            <li><strong>Time in State</strong> — how long pieces sit at each stage. Find the bottleneck in your hobby</li>
+            <li><strong>Completion Rate</strong> — finished pieces vs total over time</li>
+            <li><strong>Painting Velocity</strong> — pieces finished per week or per month. Set a pace and beat it</li>
+            <li>Every chart exports as a branded infographic, ready to post wherever you share your hobby</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-      <p id="success-message" class="success hidden">Thanks! We'll be in touch.</p>
+    <section class="section section-pricing">
+      <div class="container container-wide">
+        <p class="section-eyebrow">Pricing</p>
+        <h2 class="section-title">The whole app, free. Pay when your collection grows.</h2>
+        <p class="section-lede">Free and Pro have the same features: every tab, every chart, every recipe tool. The only difference is how much you can store. Pro lifts the cap.</p>
 
-      <a href="#what" class="learn-more">Sure... but what is it really?</a>
-    </div>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3>Free</h3>
+            <p class="pricing-price">$0</p>
+            <ul>
+              <li>Up to 20 miniatures (a 5-pack squad counts as one)</li>
+              <li>Up to 10 paint recipes</li>
+              <li>Every other feature: photos, sessions, paint tracking, Discover, showroom, statistics</li>
+            </ul>
+          </article>
+          <article class="pricing-card pricing-card-pro">
+            <p class="pricing-card-flag">Pre-order: 50% off</p>
+            <h3>Pro</h3>
+            <ul class="pricing-tiers">
+              <li><span class="tier-price">$3.99</span><span class="tier-period">/ month</span></li>
+              <li><span class="tier-price">$19.99</span><span class="tier-period">/ year</span><span class="tier-tag">Best value</span></li>
+              <li><span class="tier-price">$34.99</span><span class="tier-period">Lifetime, one-time</span></li>
+            </ul>
+            <p class="pricing-note">Pre-order discount: 50% off your first year on monthly or yearly plans, or 50% off the lifetime purchase.</p>
+            <ul>
+              <li>Unlimited miniatures</li>
+              <li>Unlimited paint recipes</li>
+              <li>Everything else identical to Free</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-waitlist" id="waitlist">
+      <div class="container">
+        <p class="section-eyebrow">Waitlist</p>
+        <h2 class="section-title">Get on the pre-order list</h2>
+        <p class="section-lede">Join the waitlist to be notified the moment pre-order opens. Pre-order pricing is 50% off your first year on the monthly or yearly plan, or 50% off the lifetime purchase.</p>
+
+        <form id="signup-form">
+          <!-- Honeypot — hidden from real users, bots fill it in -->
+          <div aria-hidden="true" class="hp">
+            <input type="text" name="company" tabindex="-1" autocomplete="off">
+          </div>
+
+          <fieldset>
+            <legend>Email</legend>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </fieldset>
+
+          <fieldset>
+            <legend>Platform</legend>
+            <div class="platform-picker">
+              <label class="platform-option">
+                <input type="radio" name="platform" value="ios" required>
+                <span>iOS</span>
+              </label>
+              <label class="platform-option">
+                <input type="radio" name="platform" value="android">
+                <span>Android</span>
+              </label>
+              <label class="platform-option">
+                <input type="radio" name="platform" value="both">
+                <span>Both</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="submit">Join the waitlist</button>
+        </form>
+
+        <p id="success-message" class="success hidden">Thanks! We'll be in touch.</p>
+      </div>
+    </section>
   </main>
-
-  <section id="what" class="details">
-    <div class="container">
-      <h2>The app your paint desk is missing</h2>
-
-      <div class="feature">
-        <h3>Your collection, organised</h3>
-        <p>Catalogue every miniature you own, whether it's assembled, primed, half-painted, or finished. Track where each one sits in your pipeline so the pile of shame doesn't feel quite so shameful.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Paint recipes that stick around</h3>
-        <p>Record exactly how you painted something. Every layer, wash, and drybrush, saved so you can recreate it six months later without guessing. Attach recipes to miniatures and reuse them across projects.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Steal recipes from painters you admire</h3>
-        <p>See someone's incredible NMM gold or perfect skin tone? If they've shared the recipe, you can save it to your own collection and use it on your next project. No more screenshotting Reddit tutorials.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Painting sessions that guide you</h3>
-        <p>Start a painting session on any miniature, with or without a recipe. Follow it step by step, skip what doesn't apply, take notes on what you changed. Building a recipe as you go? The session captures it for you so you can reuse it next time.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Show off your work</h3>
-        <p>When a mini is done, put it in your showcase. Share it with other painters or keep it as a personal gallery of everything you've finished.</p>
-      </div>
-
-      <div class="feature">
-        <h3>What makes it different?</h3>
-        <p>Vitrine is built specifically for miniature painters. Not a general hobby tracker, not a social media feed with a paint filter. Every feature is designed around how painters actually work: by project, by recipe, by step.</p>
-      </div>
-    </div>
-  </section>
 
   <footer class="site-footer">
     <div class="container">

@@ -1,0 +1,256 @@
+/* Press kit — additions on top of ../style.css */
+
+.press-hero {
+  padding: 3.5rem 1.5rem 3rem;
+}
+
+.press-breadcrumb {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.press-breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.press-breadcrumb a:hover {
+  color: var(--color-accent);
+}
+
+.press-download-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.875rem 1.5rem;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.press-download-cta:hover,
+.press-download-cta:focus-visible {
+  background: var(--color-accent-hover);
+  outline: none;
+}
+
+.press-download-cta .arrow {
+  transition: transform 0.15s;
+}
+
+.press-download-cta:hover .arrow {
+  transform: translateY(2px);
+}
+
+.press-download-meta {
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.press-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.press-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.press-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.press-body {
+  color: var(--color-text);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+}
+
+.press-body:last-child {
+  margin-bottom: 0;
+}
+
+.press-body-muted {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+/* Quick facts */
+.press-facts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+@media (min-width: 560px) {
+  .press-facts {
+    grid-template-columns: 180px 1fr;
+    gap: 0.5rem 1.5rem;
+  }
+
+  .press-facts > div {
+    display: contents;
+  }
+}
+
+.press-facts > div {
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.press-facts dt {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  padding-bottom: 0.25rem;
+}
+
+.press-facts dd {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.press-facts dd a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.press-facts dd a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 560px) {
+  .press-facts dt {
+    padding: 0.625rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .press-facts dd {
+    padding: 0.625rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+/* Feature list */
+.press-feature-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.press-feature-list li {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 0.9375rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.press-feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.press-feature-list li strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Asset gallery */
+.press-asset-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.press-asset-row-icons {
+  gap: 1.5rem;
+}
+
+.press-asset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  transition: color 0.15s;
+}
+
+.press-asset:hover {
+  color: var(--color-accent);
+}
+
+.press-asset img {
+  display: block;
+  height: 260px;
+  width: auto;
+  margin-bottom: 0.5rem;
+  transition: transform 0.15s;
+}
+
+.press-asset:hover img {
+  transform: translateY(-2px);
+}
+
+.press-asset-row-icons .press-asset img {
+  height: auto;
+  width: 128px;
+  border-radius: 22px;
+}
+
+/* Contact section */
+.press-contact-section {
+  text-align: center;
+}
+
+.press-contact-section .press-section-title {
+  text-align: center;
+}
+
+.press-contact-email {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.5rem 0 2rem;
+}
+
+.press-contact-email a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.press-contact-email a:hover {
+  text-decoration: underline;
+}

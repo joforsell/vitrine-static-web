@@ -54,6 +54,8 @@ Vitrine is built by Johan Forsell, a Swedish indie developer who picked up minia
 | --- | --- |
 | Product | Vitrine |
 | Platforms | iOS and Android |
+| App Store | https://apps.apple.com/app/id6761633925 (iOS pre-order open) |
+| Google Play | Pre-order opening soon |
 | Launch date | June 8, 2026 |
 | Pricing | Free, with optional Premium at $3.99 / month, $19.99 / year, or $34.99 lifetime |
 | Pre-order discount | Pre-ordering Vitrine in the App Store or Google Play unlocks 50% off any Premium plan. Recurring plans get the discount for the first year; lifetime gets it once. |

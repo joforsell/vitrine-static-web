@@ -17,7 +17,10 @@
       "Bash(python3)",
       "Read(//tmp/**)",
       "Bash(python3 *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "WebFetch(domain:tools.applemediaservices.com)",
+      "WebFetch(domain:toolbox.marketingtools.apple.com)",
+      "Bash(curl -sL -o /Users/johan.forsell/Developer/vitrine-static-web/press/badge-pre-order-app-store.svg \"https://developer.apple.com/app-store/marketing/guidelines/images/badge-pre-order-on-the-app-store.svg\")"
     ]
   }
 }

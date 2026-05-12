@@ -8,7 +8,9 @@
 
 - **Platforms:** iOS and Android
 - **Launch date:** June 8, 2026
-- **Store listings:** App Store and Google Play, TBA at launch
+- **Store listings:**
+  - App Store (iOS pre-order open): https://apps.apple.com/app/id6761633925
+  - Google Play (pre-order opening soon)
 - **Website:** https://vitrineminis.com
 
 ## Pricing

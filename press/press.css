@@ -231,11 +231,15 @@
   border-radius: 22px;
 }
 
-/* Beta tester quote */
+/* Beta tester quotes */
 .press-quote {
   border-left: 3px solid var(--color-border-emphasis);
   padding: 0.25rem 0 0.25rem 1.25rem;
-  margin: 0;
+  margin: 0 0 1.75rem;
+}
+
+.press-quote:last-of-type {
+  margin-bottom: 0;
 }
 
 .press-quote p {
@@ -248,8 +252,8 @@
 
 .press-quote footer {
   font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-muted);
   font-style: normal;

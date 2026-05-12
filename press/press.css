@@ -231,6 +231,31 @@
   border-radius: 22px;
 }
 
+/* Beta tester quote */
+.press-quote {
+  border-left: 3px solid var(--color-border-emphasis);
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  margin: 0;
+}
+
+.press-quote p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  font-style: italic;
+  margin: 0 0 0.75rem;
+}
+
+.press-quote footer {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-style: normal;
+  margin-top: 0.75rem;
+}
+
 /* Contact section */
 .press-contact-section {
   text-align: center;

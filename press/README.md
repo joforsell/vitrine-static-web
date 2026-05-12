@@ -48,6 +48,16 @@ Vitrine is built by Johan Forsell, a Swedish indie developer who picked up minia
 
 ---
 
+## From the beta
+
+> "This app is amazing, just what I was looking for. It helps me to track my grey pile of shame, speed of building/painting, tracking stats. Also to keep and share painting recipes, and a gallery to show off and take inspiration from other people.
+>
+> The developer also helps a lot, with rapid and nice answers to every issue I had."
+>
+> Vitrine beta tester (anonymous)
+
+---
+
 ## Quick facts
 
 | | |

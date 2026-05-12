@@ -58,7 +58,11 @@ Vitrine is built by Johan Forsell, a Swedish indie developer who picked up minia
 
 > "I like that it is dedicated to the painting experience. Accessing beautiful photos and the paint recipes is of great help. And the app is improving with new functionalities fast. The place to be if you enjoy the painting side of the hobby."
 >
-> Luca, Vitrine beta tester
+> Luca Z., Vitrine beta tester
+
+> "I greatly enjoy Vitrine for its focus on sharing our minis and the joy of the creative aspect of the hobby. Feels nice to have a dedicated space for such things. It's easy to use and not overloaded with ads and such. The tagging system will be nice once the app's more populated to find more niche games and minis."
+>
+> Luca N., Vitrine beta tester
 
 ---
 

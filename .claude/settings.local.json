@@ -22,7 +22,9 @@
       "WebFetch(domain:toolbox.marketingtools.apple.com)",
       "Bash(curl -sL -o /Users/johan.forsell/Developer/vitrine-static-web/press/badge-pre-order-app-store.svg \"https://developer.apple.com/app-store/marketing/guidelines/images/badge-pre-order-on-the-app-store.svg\")",
       "Bash(asc --version)",
-      "Bash(asc screenshots *)"
+      "Bash(asc screenshots *)",
+      "mcp__linear__list_issue_statuses",
+      "mcp__linear__save_comment"
     ]
   }
 }

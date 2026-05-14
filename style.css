@@ -332,14 +332,278 @@ h1 {
 }
 
 @media (max-width: 520px) {
+  .feature-screens {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
   .feature-screens figure {
     min-width: 0;
-    width: 100%;
     height: 380px;
   }
   .feature-screens img {
     height: 300px;
   }
+}
+
+/* ------- Reservation / Challenge entry cards on the main page ------- */
+.claim-entries {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 720px) {
+  .claim-entries {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+}
+
+.claim-entry {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.claim-entry:hover,
+.claim-entry:focus-visible {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.claim-entry:hover .claim-entry-cta .arrow,
+.claim-entry:focus-visible .claim-entry-cta .arrow {
+  transform: translateX(3px);
+}
+
+.claim-entry-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.claim-entry h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin-bottom: 0.625rem;
+}
+
+.claim-entry > p {
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  font-size: 0.9375rem;
+  margin-bottom: 1.25rem;
+}
+
+.claim-entry-cta {
+  margin-top: auto;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.claim-entry-cta .arrow {
+  display: inline-block;
+  transition: transform 0.15s;
+}
+
+/* ------- Subpage helpers (shared by /reserve/ and /challenge/) ------- */
+.subpage-hero {
+  padding: 3.5rem 1.5rem 2rem;
+  text-align: left;
+}
+
+.subpage-hero .container {
+  max-width: 560px;
+  display: block;
+}
+
+.subpage-hero h1 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.subpage-hero .subtitle {
+  text-align: left;
+  max-width: none;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.subpage-section {
+  padding-top: 2rem;
+}
+
+.subpage-section .container {
+  max-width: 560px;
+}
+
+.subpage-breadcrumb {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.subpage-breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.subpage-breadcrumb a:hover {
+  color: var(--color-accent);
+}
+
+.subpage-aside {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.subpage-aside a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.subpage-aside a:hover {
+  text-decoration: underline;
+}
+
+/* Reservation form layout on /reserve/ */
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.reservation-rules {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.reservation-rules-heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.875rem;
+}
+
+.reservation-rules ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.reservation-rules li {
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  font-size: 0.9375rem;
+}
+
+.reservation-rules li strong {
+  color: var(--color-text);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.125rem;
+}
+
+/* Handle input with the inline URL prefix (used on /reserve/) */
+.handle-input {
+  display: flex;
+  align-items: stretch;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.handle-input:focus-within {
+  border-color: var(--color-accent);
+}
+
+.handle-prefix {
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  background: rgba(0, 0, 0, 0.2);
+  border-right: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.handle-input input[type="text"] {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 0.75rem 0.875rem;
+}
+
+.handle-input input[type="text"]:focus {
+  border: none;
+}
+
+.field-optional {
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-text-muted);
+}
+
+textarea {
+  width: 100%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 5rem;
+  line-height: 1.5;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+textarea:focus {
+  border-color: var(--color-accent);
+}
+
+textarea::placeholder {
+  color: var(--color-text-muted);
 }
 
 /* ------- Showroom Challenge steps ------- */
@@ -385,12 +649,12 @@ h1 {
   margin-bottom: 0.375rem;
 }
 
-.challenge-steps li strong a {
+.challenge-steps li a {
   color: var(--color-accent);
   text-decoration: none;
 }
 
-.challenge-steps li strong a:hover {
+.challenge-steps li a:hover {
   text-decoration: underline;
 }
 
@@ -603,7 +867,8 @@ label {
   color: var(--color-text-muted);
 }
 
-input[type="email"] {
+input[type="email"],
+input[type="text"] {
   width: 100%;
   padding: 0.75rem 1rem;
   background: var(--color-surface);
@@ -615,11 +880,13 @@ input[type="email"] {
   transition: border-color 0.15s;
 }
 
-input[type="email"]:focus {
+input[type="email"]:focus,
+input[type="text"]:focus {
   border-color: var(--color-accent);
 }
 
-input[type="email"]::placeholder {
+input[type="email"]::placeholder,
+input[type="text"]::placeholder {
   color: var(--color-text-muted);
 }
 

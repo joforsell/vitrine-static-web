@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve your handle — Vitrine</title>
+  <meta name="description" content="Reserve your handle on Vitrine before launch. We'll email you a redemption code to use in-app when Vitrine ships.">
+  <meta property="og:title" content="Reserve your Vitrine handle">
+  <meta property="og:description" content="Lock in your handle for app.vitrineminis.com/u/your-handle before launch.">
+  <meta property="og:image" content="https://vitrineminis.com/og-reserve.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://vitrineminis.com/og-reserve.png">
+  <meta property="og:url" content="https://vitrineminis.com/reserve/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/png" href="../favicon.png">
+</head>
+<body>
+  <main>
+    <section class="hero subpage-hero">
+      <div class="container">
+        <p class="subpage-breadcrumb"><a href="../">vitrineminis.com</a> / reserve</p>
+        <h1>Reserve your handle</h1>
+        <p class="subtitle">Lock in your handle for your future showroom at app.vitrineminis.com/u/your-handle. We'll email a redemption code that you'll use in-app at launch to claim the handle and any starter profile you fill in here.</p>
+      </div>
+    </section>
+
+    <section class="section subpage-section">
+      <div class="container">
+        <form id="reservation-form" class="reservation-form" novalidate>
+          <div aria-hidden="true" class="hp">
+            <input type="text" name="company" tabindex="-1" autocomplete="off">
+          </div>
+
+          <fieldset>
+            <legend>Email</legend>
+            <input type="email" id="reservation-email" name="email" placeholder="you@example.com" required>
+            <p class="field-hint">We'll send the redemption code here.</p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Handle</legend>
+            <div class="handle-input">
+              <span class="handle-prefix">vitrineminis.com/u/</span>
+              <input type="text" id="reservation-handle" name="handle" placeholder="your-handle" required pattern="[a-z0-9_\-]{3,30}" autocomplete="off" autocapitalize="off" spellcheck="false">
+            </div>
+            <p class="field-hint">Lowercase letters, numbers, dashes, and underscores. 3–30 characters.</p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Display name <span class="field-optional">(optional)</span></legend>
+            <input type="text" id="reservation-display-name" name="display_name" placeholder="What other painters see">
+          </fieldset>
+
+          <fieldset>
+            <legend>Bio <span class="field-optional">(optional)</span></legend>
+            <textarea id="reservation-bio" name="bio" rows="3" placeholder="A short intro for your showroom"></textarea>
+          </fieldset>
+
+          <button type="submit">Reserve handle</button>
+        </form>
+
+        <p id="reservation-success" class="success hidden">Reservation received. Check your email for the redemption code.</p>
+
+        <aside class="reservation-rules">
+          <p class="reservation-rules-heading">A few ground rules</p>
+          <ul>
+            <li><strong>Offensive handles get revoked.</strong> Slurs, harassment, or obvious trademark grabs will be rejected and you'll be asked to pick another.</li>
+            <li><strong>Known painter handles need verification.</strong> If your handle matches one used by an active painter on Instagram, TikTok, YouTube, or elsewhere, we'll reach out to confirm you're the same person before activating it. We don't want anyone grabbing a name like <code>elminiaturista</code> out from under the painter who actually goes by it.</li>
+          </ul>
+        </aside>
+
+        <p class="subpage-aside">Want a shot at lifetime Premium too? <a href="../challenge/">Enter the Showroom Challenge</a> after you've reserved your handle.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="../">vitrineminis.com</a>
+        <a href="../press/">Press kit</a>
+        <a href="../terms/">Terms & Conditions</a>
+        <a href="../privacy/">Privacy Policy</a>
+      </div>
+      <p class="footer-contact"><a href="mailto:contact@vitrineminis.com">contact@vitrineminis.com</a></p>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

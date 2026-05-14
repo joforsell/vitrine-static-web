@@ -42,12 +42,33 @@ if (form) {
 
 const reservationForm = document.getElementById("reservation-form");
 const reservationSuccess = document.getElementById("reservation-success");
+const reservationError = document.getElementById("reservation-error");
+
+function showReservationError(message) {
+  if (reservationError) {
+    reservationError.textContent = message;
+    reservationError.classList.remove("hidden");
+  } else {
+    alert(message);
+  }
+}
+
+function clearReservationError() {
+  if (reservationError) {
+    reservationError.textContent = "";
+    reservationError.classList.add("hidden");
+  }
+}
 
 if (reservationForm) {
+  reservationForm.addEventListener("input", clearReservationError);
+
   reservationForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     if (!reservationForm.reportValidity()) return;
+
+    clearReservationError();
 
     const formData = new FormData(reservationForm);
 
@@ -71,10 +92,12 @@ if (reservationForm) {
         reservationSuccess.classList.remove("hidden");
       } else {
         const data = await res.json().catch(() => null);
-        alert(data?.error ?? "Something went wrong. Please try again.");
+        showReservationError(
+          data?.error ?? "Something went wrong. Please try again."
+        );
       }
     } catch {
-      alert("Network error. Please try again.");
+      showReservationError("Network error. Please try again.");
     }
   });
 }

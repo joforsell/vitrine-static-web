@@ -20,7 +20,7 @@
   - $3.99 / month
   - $19.99 / year
   - $34.99 lifetime (one-time purchase)
-- **Pre-order discount:** Pre-ordering Vitrine in the App Store or Google Play unlocks 50% off any Premium plan. Recurring plans get the discount for the first year; lifetime gets it once.
+- **Pre-order discount:** Pre-ordering Vitrine in the App Store or Google Play unlocks 50% off any Premium plan, for as long as you keep it.
 
 ## The pitch in one paragraph
 

@@ -64,6 +64,16 @@ Vitrine is built by Johan Forsell, a Swedish indie developer who picked up minia
 >
 > Luca N., Vitrine beta tester
 
+> "I really like the app, it's a good way to keep track of builds etc. ... it looks like it has real potential."
+>
+> Stefan, Vitrine beta tester
+
+> "I like having a more select and dedicated place to showcase my minis from, Vitrine provides this beautifully, rather than my images get lost in a mire of discord messages I can simply link back to my public showroom of whichever mini, no more browsing through a ridiculous amount of photos for one reference!
+>
+> Recipes are great because I'm a nightmare for remembering how I achieved a particular look / effect."
+>
+> @greybeard, Vitrine beta tester
+
 ---
 
 ## Quick facts
@@ -76,7 +86,7 @@ Vitrine is built by Johan Forsell, a Swedish indie developer who picked up minia
 | Google Play | Pre-order opening soon |
 | Launch date | June 8, 2026 |
 | Pricing | Free, with optional Premium at $3.99 / month, $19.99 / year, or $34.99 lifetime |
-| Pre-order discount | Pre-ordering Vitrine in the App Store or Google Play unlocks 50% off any Premium plan. Recurring plans get the discount for the first year; lifetime gets it once. |
+| Pre-order discount | Pre-ordering Vitrine in the App Store or Google Play unlocks 50% off any Premium plan, for as long as you keep it. |
 | Free tier | Full feature set, capped at 20 miniatures and 10 recipes |
 | Maker | Johan Forsell, indie developer, Sweden |
 | Press contact | contact@vitrineminis.com |

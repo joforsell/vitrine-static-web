@@ -342,6 +342,65 @@ h1 {
   }
 }
 
+/* ------- Showroom Challenge steps ------- */
+.challenge-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.challenge-steps li {
+  position: relative;
+  padding-left: 3.25rem;
+  counter-increment: step;
+}
+
+.challenge-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -0.125rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--color-accent-muted);
+  border: 1px solid var(--color-border-emphasis);
+  border-radius: 50%;
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.challenge-steps li strong {
+  display: block;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.375rem;
+}
+
+.challenge-steps li strong a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.challenge-steps li strong a:hover {
+  text-decoration: underline;
+}
+
+.challenge-steps li p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
 /* ------- Testimonials ------- */
 .testimonial-grid {
   display: grid;
@@ -353,6 +412,13 @@ h1 {
   .testimonial-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2rem 2.5rem;
+  }
+
+  .testimonial-grid > .testimonial:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

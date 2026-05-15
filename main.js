@@ -61,6 +61,16 @@ function clearReservationError() {
 }
 
 if (reservationForm) {
+  // Prefill handle from ?handle= query param (e.g. arriving from app.vitrineminis.com/u/<handle>)
+  const prefillHandle = new URLSearchParams(window.location.search).get("handle");
+  const handleField = document.getElementById("reservation-handle");
+  if (prefillHandle && handleField && !handleField.value) {
+    const normalised = prefillHandle.toLowerCase().slice(0, 30);
+    if (/^[a-z0-9_-]{3,30}$/.test(normalised)) {
+      handleField.value = normalised;
+    }
+  }
+
   reservationForm.addEventListener("input", clearReservationError);
 
   reservationForm.addEventListener("submit", async (e) => {

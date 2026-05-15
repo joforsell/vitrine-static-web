@@ -1,3 +1,7 @@
+// When you change this file, bump ?v=YYYYMMDD on the <script> tags in
+// index.html and reserve/index.html so browsers don't serve stale JS
+// (main.js is cached for 4 hours by the upstream Cache-Control header).
+
 const SIGNUP_URL =
   "https://ybkxdgcahmgdjiudaxzw.supabase.co/functions/v1/signup";
 const RESERVATION_URL =

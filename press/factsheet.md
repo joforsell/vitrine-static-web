@@ -10,7 +10,7 @@
 - **Launch date:** June 8, 2026
 - **Store listings:**
   - App Store (iOS pre-order open): https://apps.apple.com/app/id6761633925
-  - Google Play (pre-order opening soon)
+  - Google Play (Android pre-order open): https://play.google.com/store/apps/details?id=com.joforsell.vitrine
 - **Website:** https://vitrineminis.com
 
 ## Pricing

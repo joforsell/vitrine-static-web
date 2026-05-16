@@ -1,0 +1,13 @@
+file '/Users/johan.forsell/Developer/vitrine-static-web/marketing/challenge-video-slides/slide-01.png'
+duration 3
+file '/Users/johan.forsell/Developer/vitrine-static-web/marketing/challenge-video-slides/slide-02.png'
+duration 4
+file '/Users/johan.forsell/Developer/vitrine-static-web/marketing/challenge-video-slides/slide-03.png'
+duration 4
+file '/Users/johan.forsell/Developer/vitrine-static-web/marketing/challenge-video-slides/slide-04.png'
+duration 4
+file '/Users/johan.forsell/Developer/vitrine-static-web/marketing/challenge-video-slides/slide-05.png'
+duration 3
+file '/Users/johan.forsell/Developer/vitrine-static-web/marketing/challenge-video-slides/slide-06.png'
+duration 4
+file '/Users/johan.forsell/Developer/vitrine-static-web/marketing/challenge-video-slides/slide-06.png'

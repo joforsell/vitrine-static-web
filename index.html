@@ -3,6 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // Supabase auth callbacks (password recovery, email confirm, magic link) currently
+    // land on the site root with tokens in the URL hash. Forward recovery hits to the
+    // dedicated handler before the homepage renders.
+    (function () {
+      var hash = window.location.hash;
+      if (!hash) return;
+      var params = new URLSearchParams(hash.charAt(0) === "#" ? hash.slice(1) : hash);
+      if (params.get("type") === "recovery") {
+        window.location.replace("/reset-password/" + hash);
+      }
+    })();
+  </script>
   <title>Vitrine</title>
   <meta property="og:title" content="Vitrine — For Miniature Painters">
   <meta property="og:description" content="The collection app your paint desk is missing. Track every miniature, save every recipe, and show off your work.">

@@ -876,7 +876,8 @@ label {
 }
 
 input[type="email"],
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 0.75rem 1rem;
   background: var(--color-surface);
@@ -889,12 +890,14 @@ input[type="text"] {
 }
 
 input[type="email"]:focus,
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   border-color: var(--color-accent);
 }
 
 input[type="email"]::placeholder,
-input[type="text"]::placeholder {
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
   color: var(--color-text-muted);
 }
 

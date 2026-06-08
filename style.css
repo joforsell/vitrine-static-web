@@ -83,41 +83,9 @@ h1 {
   max-width: 32ch;
 }
 
-/* ------- Pre-order banner (contains an App Store badge) ------- */
-.preorder-banner {
-  display: block;
-  width: 100%;
-  background: var(--color-accent-muted);
-  border: 1px solid var(--color-border-emphasis);
-  border-radius: var(--radius);
-  padding: 1.25rem 1.25rem 1rem;
-  text-align: center;
+/* ------- App store badge row (hero + /open/ fallback) ------- */
+.app-stores {
   margin-top: 2rem;
-}
-
-.preorder-label {
-  display: block;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-accent);
-  margin-bottom: 0.375rem;
-}
-
-.preorder-text {
-  display: block;
-  color: var(--color-text);
-  font-size: 0.9375rem;
-  line-height: 1.5;
-}
-
-.preorder-text strong {
-  color: var(--color-accent);
-}
-
-.preorder-stores {
-  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -149,12 +117,6 @@ h1 {
    needs a touch more height to feel like the same size visually. */
 .store-badge-play img {
   height: 64px;
-}
-
-.preorder-stores-note {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-  margin: 0;
 }
 
 /* ------- Hero secondary CTA (link to live community feed) ------- */
@@ -482,20 +444,6 @@ textarea::placeholder {
   border-color: var(--color-border-emphasis);
 }
 
-.pricing-card-flag {
-  position: absolute;
-  top: -0.625rem;
-  right: 1.25rem;
-  background: var(--color-accent);
-  color: var(--color-bg);
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.625rem;
-  border-radius: 4px;
-}
-
 .pricing-card h3 {
   font-size: 1.125rem;
   color: var(--color-text);
@@ -553,15 +501,6 @@ textarea::placeholder {
   padding: 0.125rem 0.5rem;
   border-radius: 4px;
   margin-left: auto;
-}
-
-.pricing-note {
-  font-size: 0.8125rem;
-  line-height: 1.5;
-  color: var(--color-text-muted);
-  margin-bottom: 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--color-border);
 }
 
 .pricing-card ul {

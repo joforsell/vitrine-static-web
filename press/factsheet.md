@@ -9,8 +9,8 @@
 - **Platforms:** iOS and Android
 - **Launch date:** June 8, 2026
 - **Store listings:**
-  - App Store (iOS pre-order open): https://apps.apple.com/app/id6761633925
-  - Google Play (Android pre-order open): https://play.google.com/store/apps/details?id=com.joforsell.vitrine
+  - App Store: https://apps.apple.com/app/id6761633925
+  - Google Play: https://play.google.com/store/apps/details?id=com.joforsell.vitrine
 - **Website:** https://vitrineminis.com
 
 ## Pricing
@@ -20,7 +20,6 @@
   - $3.99 / month
   - $19.99 / year
   - $34.99 lifetime (one-time purchase)
-- **Pre-order discount:** Pre-ordering Vitrine in the App Store or Google Play unlocks 50% off any Premium plan, for as long as you keep it.
 
 ## The pitch in one paragraph
 

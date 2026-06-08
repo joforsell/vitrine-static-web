@@ -26,7 +26,7 @@ Vitrine is a native app for self-painting miniature hobbyists, built for both iO
 
 Most hobby tools cover a slice of the workflow. A paint inventory app here, a painting timer there, social posts somewhere else. Vitrine brings those pieces into one place. Track a 5-pack squad at 2 finished, 1 work-in-progress, and 2 primed at the same time, instead of pretending the whole unit moves as one. Record the exact paints and mix ratios you used on each step, then run a Session against that recipe when you paint the next model. Tag everything with manufacturer, setting, model, and genre, and use those tags to discover what other painters in the community are building.
 
-Vitrine launches on the App Store and Google Play on June 8, 2026, with a Free tier that includes every feature and a Premium upgrade that lifts the 20-miniature and 10-recipe caps. Pre-ordering the app in either store before launch unlocks 50% off any Premium plan, whether monthly, yearly, or the one-time lifetime purchase.
+Vitrine is available on the App Store and Google Play, launched June 8, 2026. The Free tier includes every feature and is capped at 20 miniatures and 10 recipes. A Premium upgrade lifts both caps, available monthly, yearly, or as a one-time lifetime purchase.
 
 ---
 
@@ -82,11 +82,10 @@ Vitrine is built by Johan Forsell, a Swedish indie developer who picked up minia
 | --- | --- |
 | Product | Vitrine |
 | Platforms | iOS and Android |
-| App Store | https://apps.apple.com/app/id6761633925 (iOS pre-order open) |
-| Google Play | https://play.google.com/store/apps/details?id=com.joforsell.vitrine (Android pre-order open) |
+| App Store | https://apps.apple.com/app/id6761633925 |
+| Google Play | https://play.google.com/store/apps/details?id=com.joforsell.vitrine |
 | Launch date | June 8, 2026 |
 | Pricing | Free, with optional Premium at $3.99 / month, $19.99 / year, or $34.99 lifetime |
-| Pre-order discount | Pre-ordering Vitrine in the App Store or Google Play unlocks 50% off any Premium plan, for as long as you keep it. |
 | Free tier | Full feature set, capped at 20 miniatures and 10 recipes |
 | Maker | Johan Forsell, indie developer, Sweden |
 | Press contact | contact@vitrineminis.com |

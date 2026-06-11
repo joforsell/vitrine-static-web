@@ -55,6 +55,26 @@
       </div>
     </section>
 
+    <section class="section section-stats hidden" id="stats-section" aria-live="polite">
+      <div class="container container-wide">
+        <p class="section-eyebrow">Live now</p>
+        <ul class="stats-grid">
+          <li class="stat">
+            <span class="stat-number" data-stat="units">—</span>
+            <span class="stat-label">units painted across <span data-stat="models">—</span> models</span>
+          </li>
+          <li class="stat">
+            <span class="stat-number" data-stat="recipes">—</span>
+            <span class="stat-label">paint recipes saved</span>
+          </li>
+          <li class="stat">
+            <span class="stat-number" data-stat="paints">—</span>
+            <span class="stat-label">paints in personal libraries</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="section section-library">
       <div class="container container-wide">
         <p class="section-eyebrow">Inside Vitrine</p>
@@ -241,5 +261,44 @@
       <p class="footer-contact"><a href="mailto:contact@vitrineminis.com">contact@vitrineminis.com</a></p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var SUPABASE_URL = "https://ybkxdgcahmgdjiudaxzw.supabase.co";
+      var SUPABASE_ANON_KEY = "sb_publishable_S0q2EfXJd7j50m8uf8PFmw_LIqTb-o6";
+
+      fetch(SUPABASE_URL + "/rest/v1/rpc/get_homepage_stats", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: SUPABASE_ANON_KEY,
+          Authorization: "Bearer " + SUPABASE_ANON_KEY,
+        },
+        body: "{}",
+      })
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r); })
+        .then(function (rows) {
+          var row = Array.isArray(rows) ? rows[0] : rows;
+          if (!row) return;
+          var units = Number(row.units);
+          var models = Number(row.models);
+          var recipes = Number(row.recipes);
+          var paints = Number(row.paints);
+          // PostgREST may return bigint as string. Guard against NaN and
+          // against an all-zero response (likely a misconfigured RLS/grant).
+          if (![units, models, recipes, paints].every(Number.isFinite)) return;
+          if (units + recipes + paints === 0) return;
+
+          var fmt = new Intl.NumberFormat("en-US");
+          var values = { units: units, models: models, recipes: recipes, paints: paints };
+          document.querySelectorAll("[data-stat]").forEach(function (el) {
+            var key = el.dataset.stat;
+            if (key in values) el.textContent = fmt.format(values[key]);
+          });
+          document.getElementById("stats-section").classList.remove("hidden");
+        })
+        .catch(function () { /* leave the section hidden on any failure */ });
+    })();
+  </script>
 </body>
 </html>
